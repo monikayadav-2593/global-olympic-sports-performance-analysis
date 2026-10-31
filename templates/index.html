@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore 120 years of Olympic athlete performance and medal results with an interactive Tableau dashboard.">
+    <title>Olympic Performance | Global Dashboard</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            color: #17233b;
+            background: #f4f7fb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body { margin: 0; }
+
+        .hero {
+            padding: 64px 24px 56px;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(135deg, #102748, #174e70);
+        }
+
+        .eyebrow {
+            margin: 0 0 14px;
+            color: #9bd9e7;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: -0.04em;
+        }
+
+        .hero-copy {
+            max-width: 680px;
+            margin: 18px auto 0;
+            color: #d3e2ef;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        main {
+            width: min(1200px, calc(100% - 40px));
+            margin: 36px auto 56px;
+        }
+
+        .dashboard-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.35rem;
+        }
+
+        .dashboard-caption {
+            margin: 6px 0 0;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .dashboard-card {
+            overflow: hidden;
+            border: 1px solid #e1e8f0;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 16px 40px rgb(23 35 59 / 8%);
+        }
+
+        .tableau-frame {
+            display: block;
+            width: 100%;
+            height: min(850px, 72vw);
+            min-height: 560px;
+            border: 0;
+        }
+
+        footer {
+            padding: 20px 24px;
+            color: #64748b;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 48px 20px 42px; }
+            main { width: min(100% - 24px, 1200px); margin-top: 24px; }
+            .dashboard-heading { align-items: start; }
+            .tableau-frame { height: 720px; min-height: 560px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">A data story across 120 years</p>
+        <h1>Olympic Performance</h1>
+        <p class="hero-copy">
+            Explore how nations have performed at the Olympic Games through
+            interactive medal totals and gold, silver, and bronze breakdowns.
+        </p>
+    </header>
+
+    <main>
+        <section aria-labelledby="dashboard-title">
+            <div class="dashboard-heading">
+                <div>
+                    <h2 id="dashboard-title">Explore the medal dashboard</h2>
+                    <p class="dashboard-caption">Select and interact with the charts to explore the results.</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <iframe
+                    class="tableau-frame"
+                    src="https://public.tableau.com/views/project1_17933863295920/Story1?:showVizHome=no&amp;:embed=true"
+                    title="Interactive Tableau dashboard of Olympic medal performance by country"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>Olympic Sports Performance Analysis · Flask and Tableau Public</footer>
+</body>
+</html>
