@@ -13,6 +13,17 @@ A Flask web application that presents an interactive Tableau Public story about 
 - Python 3.8 or newer
 - Flask
 
+## 🔗 Project Links & Live Demos
+* **📺 Demo Video (Google Drive):** [Watch Project Demo Video](https://drive.google.com/file/d/14Lcd3S_X6dcGEFfm39K7eY4N61ZWrHf_/view?usp=sharing)
+* **📊 Tableau Public Dashboard:** [View Interactive Tableau Story](https://public.tableau.com/app/profile/monika.yadav4773)
+
+
+## 🚀 Tech Stack
+* **Tableau Public** - Interactive data visualization and storytelling.
+* **Python Flask** - Backend web framework.
+* **HTML5 & CSS3** - Frontend user interface.
+* **Git & GitHub** - Version control and repository management.
+
 ## Run locally
 
 From the project directory, create and activate a virtual environment if desired, then install Flask and start the server:
